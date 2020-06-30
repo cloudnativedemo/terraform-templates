@@ -1,0 +1,69 @@
+
+  "terraform_version": "~> 0.12.0",
+  "input_datatypes": [
+  ],
+  "output_datatype": "content_template_output",
+  "input_groups": [
+    {
+      "name": "cloud",
+      "label": "Cloud Input Variables"
+    },
+    {
+      "name": "ssh_keys",
+      "label": "SSH Keys"
+    },
+    {
+      "name": "virtualmachine",
+      "label": "Virtual Machine Input Variables"
+    },
+    {
+      "name": "image_parameters",
+      "label": "Image Parameters"
+    }
+  ],
+  "output_groups": [
+    {
+      "name": "content_template_output",
+      "label": "Outputs"
+    }
+  ],
+  "template_input_params": [
+    {
+      "name": "vsphere_datacenter",
+      "type": "string",
+      "description": "vCenter name",
+      "default": "ibmcloud-syd05",
+      "hidden": true,
+      "label": "vCenter name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vsphere_datastore",
+      "type": "string",
+      "description": "vCenter datastore",
+      "default": "datastore1",
+      "hidden": true,
+      "label": "vCenter datastore",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vsphere_network",
+      "type": "string",
+      "description": "vCenter network",
+      "default": "CoreOS public",
+      "hidden": true,
+      "label": "vCenter network",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+  ],
+  "template_output_params": []
+}
