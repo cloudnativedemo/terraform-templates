@@ -36,6 +36,9 @@ resource "vsphere_virtual_machine" "vm" {
 
   network_interface {
     network_id = data.vsphere_network.network.id
+    pv4_address       = "10.195.35.208"
+    ipv4_prefix_length = "27"
+    ipv4_gateway       = "10.195.35.193"
   }
 
   disk {
