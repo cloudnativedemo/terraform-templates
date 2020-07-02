@@ -9,6 +9,11 @@ data "vsphere_datacenter" "dc" {
   name = var.vsphere_datacenter
 }
 
+data "vsphere_resource_pool" "resource_pool" {
+  name          = var.vsphere_resource_pool
+  datacenter_id = data.vsphere_datacenter.dc.id
+}
+
 data "vsphere_datastore" "datastore" {
   name          = var.vsphere_datastore
   datacenter_id = data.vsphere_datacenter.dc.id
@@ -41,6 +46,10 @@ resource "vsphere_virtual_machine" "vm" {
 
 variable "vsphere_datacenter" {
   description = "vCenter name"
+}
+
+variable "vsphere_resource_pool" {
+  description = "vCenter resource pool"
 }
 
 variable "vsphere_datastore" {

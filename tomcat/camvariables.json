@@ -41,6 +41,18 @@
       "group_name": "cloud"
     },
     {
+      "name": "vsphere_resource_pool",
+      "type": "string",
+      "description": "vCenter resource pool",
+      "default": "syd05-rpool",
+      "hidden": false,
+      "label": "Resource pool",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
       "name": "vsphere_datastore",
       "type": "string",
       "description": "vCenter datastore",
