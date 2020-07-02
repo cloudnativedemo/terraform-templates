@@ -63,7 +63,7 @@
       "required": true,
       "immutable": false,
       "group_name": "cloud"
-    },
+    }
   ],
   "template_output_params": []
 }
