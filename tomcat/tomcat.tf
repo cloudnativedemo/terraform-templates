@@ -9,7 +9,7 @@ data "vsphere_datacenter" "dc" {
   name = var.vsphere_datacenter
 }
 
-data "vsphere_resource_pool" "resource_pool" {
+data "vsphere_resource_pool" "pool" {
   name          = var.vsphere_resource_pool
   datacenter_id = data.vsphere_datacenter.dc.id
 }
@@ -27,7 +27,7 @@ data "vsphere_network" "network" {
 
 resource "vsphere_virtual_machine" "vm" {
   name             = "terraform-test"
-//  resource_pool_id = data.vsphere_resource_pool.pool.id
+  resource_pool_id = data.vsphere_resource_pool.pool.id
   datastore_id     = data.vsphere_datastore.datastore.id
 
   num_cpus = 2
