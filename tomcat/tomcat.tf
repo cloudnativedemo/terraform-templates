@@ -36,11 +36,11 @@ resource "vsphere_virtual_machine" "vm" {
 
   network_interface {
     network_id = data.vsphere_network.network.id
-    ipv4_address       = "10.195.35.208"
-    ipv4_netmask = "27"
+//    ipv4_address       = "10.195.35.208"
+//    ipv4_netmask = "27"
   }
 
-  ipv4_gateway       = "10.195.35.193"
+//  ipv4_gateway       = "10.195.35.193"
 
   disk {
     label = "disk0"
