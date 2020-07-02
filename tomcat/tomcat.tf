@@ -25,6 +25,11 @@ data "vsphere_network" "network" {
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
+data "vsphere_virtual_machine" "template" {
+  name          = "centos8_x64-template"
+  datacenter_id = data.vsphere_datacenter.dc.id
+}
+
 resource "vsphere_virtual_machine" "vm" {
   name             = "terraform-test"
   resource_pool_id = data.vsphere_resource_pool.pool.id
@@ -32,19 +37,39 @@ resource "vsphere_virtual_machine" "vm" {
 
   num_cpus = 2
   memory   = 1024
-  guest_id = "centos8_64Guest"
+
+  guest_id = data.vsphere_virtual_machine.template.guest_id
+
+  scsi_type = "${data.vsphere_virtual_machine.template.scsi_type}"
 
   network_interface {
-    network_id = data.vsphere_network.network.id
-//    ipv4_address       = "10.195.35.208"
-//    ipv4_netmask = "27"
+    network_id   = "${data.vsphere_network.network.id}"
+    adapter_type = "${data.vsphere_virtual_machine.template.network_interface_types[0]}"
   }
 
-//  ipv4_gateway       = "10.195.35.193"
-
   disk {
-    label = "disk0"
-    size  = 20
+    label            = "disk0"
+    size             = "${data.vsphere_virtual_machine.template.disks.0.size}"
+    eagerly_scrub    = "${data.vsphere_virtual_machine.template.disks.0.eagerly_scrub}"
+    thin_provisioned = "${data.vsphere_virtual_machine.template.disks.0.thin_provisioned}"
+  }
+
+  clone {
+    template_uuid = "${data.vsphere_virtual_machine.template.id}"
+
+    customize {
+      linux_options {
+        host_name = "terraform-test"
+        domain    = "ocp4.cloudnativekube.com"
+      }
+
+      network_interface {
+        ipv4_address = "135.90.66.172"
+        ipv4_netmask = 28
+      }
+
+      ipv4_gateway = "135.90.66.161"
+    }
   }
 }
 
