@@ -46,7 +46,7 @@
     },
     {
       "name": "vm_1_dns_servers",
-      "type": "list(virtualmachine)",
+      "type": "list(object({label = string}))",
       "description": "DNS servers for the virtual network adapter",
       "hidden": false,
       "label": "DNS Servers - vm_1",
