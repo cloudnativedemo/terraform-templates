@@ -4,17 +4,6 @@
    "description": "Virtual machine object encapsulate details for provisiong a VM on vSphere",
    "attributes": [
     {
-      "name": "Name of the attribute",
-      "type": "type of the attribute",
-      "description": "Description of the attribute",
-      "label": "Label of the attribute",
-      "required": "Is it a mandatory attribute",
-      "secured": "Is it a secured attribute",
-      "immutable": "Is it immutable",
-      "hidden": "Is it hidden",
-      "default": "The default value of the attribute"
-    },
-    {
       "name": "vsphere_datacenter",
       "type": "string",
       "description": "Data centre name",
