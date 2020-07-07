@@ -1,0 +1,40 @@
+{
+   "name": "Multiple Virtual Machines on vSphere",
+   "description": "Provision multiple VMs on vSphere at once",
+   "version": "1.0",
+   "type": "prebuilt",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "Cloudnativedemo",
+     "template_provider": "VMware vSphere",
+     "template": {
+       "templateData": "",
+       "templateVariables": "",
+       "templateOutput": ""
+     },
+    "template_source": {
+      "githubRepoUrl": "",
+      "githubAccessToken": "",
+      "relativePathToTemplateFolder": "multi-virtualmachines",
+      "templateFileName": "compute_static_ip.tf"
+    }
+   },
+   "metadata": {
+     "displayName": "Multi VMs on vSphere",
+     "longDescription": "Deploys a multiple virtual machines with static IPs",
+     "bullets": [
+       {
+         "title": "Clouds",
+         "description": "VMware vSphere"
+       },
+       {
+         "title": "Operating systems supported",
+         "description": "Red Hat Enterprise Linux 8"
+       },
+       {
+         "title": "Topology",
+         "description": "VMware: multiVMs"
+       }
+     ]
+   }
+ }

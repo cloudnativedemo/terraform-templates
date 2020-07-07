@@ -1,0 +1,129 @@
+{
+  "terraform_version": "~> 0.12.0",
+  "input_datatypes": [
+  ],
+  "output_datatype": "content_template_output",
+  "input_groups": [
+    {
+      "name": "cloud",
+      "label": "Cloud Input Variables"
+    },
+    {
+      "name": "ssh_keys",
+      "label": "SSH Keys"
+    },
+    {
+      "name": "virtualmachine",
+      "label": "Virtual Machine Input Variables"
+    },
+    {
+      "name": "image_parameters",
+      "label": "Image Parameters"
+    }
+  ],
+  "output_groups": [
+    {
+      "name": "content_template_output",
+      "label": "Outputs"
+    }
+  ],
+  "template_input_params": [
+    {
+      "name": "vsphere_datacenter",
+      "type": "string",
+      "description": "Data centre name",
+      "default": "ibmcloud-syd05",
+      "hidden": false,
+      "label": "vCenter name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vsphere_resource_pool",
+      "type": "string",
+      "description": "vCenter resource pool",
+      "default": "syd05-rpool",
+      "hidden": false,
+      "label": "Resource pool",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vsphere_datastore",
+      "type": "string",
+      "description": "vCenter datastore",
+      "default": "datastore1",
+      "hidden": false,
+      "label": "vCenter datastore",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vsphere_network",
+      "type": "string",
+      "description": "vCenter network",
+      "default": "CoreOS public",
+      "hidden": false,
+      "label": "vCenter network",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vsphere_folder",
+      "type": "string",
+      "description": "vCenter VM folder",
+      "default": "terraform",
+      "hidden": false,
+      "label": "vCenter network",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vsphere_vm_memory",
+      "type": "string",
+      "description": "Virtual machine memory",
+      "default": "2048",
+      "hidden": false,
+      "label": "VM memory (RAM)",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vsphere_vm_cpu",
+      "type": "string",
+      "description": "Virtual machine CPU",
+      "default": "2",
+      "hidden": false,
+      "label": "VM CPU",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vsphere_vm_memory",
+      "type": "string",
+      "description": "Virtual machine memory",
+      "default": "2048",
+      "hidden": false,
+      "label": "VM memory (RAM)",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    }
+  ],
+  "template_output_params": []
+}
