@@ -10,7 +10,7 @@
     "hidden": false,
     "label": "vSphere vCenter name",
     "secured": false,
-    "required": false,
+    "required": true,
     "immutable": false
     },
     {
@@ -40,7 +40,7 @@
      "hidden": false,
      "label": "vSphere Resource Pool",
      "secured": false,
-     "required": true,
+     "required": false,
      "immutable": false
     }
     ]
