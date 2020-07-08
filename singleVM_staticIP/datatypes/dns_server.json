@@ -1,0 +1,27 @@
+{
+   "name": "dns_server",
+   "label": "DNS Servers",
+   "description": "IP/Hostname of DNS servers",
+   "attributes": [
+     {
+       "name": "dns_servers",
+       "type": "list",
+       "description": "DNS servers for the virtual network adapter",
+       "hidden": false,
+       "label": "DNS Servers",
+       "secured": false,
+       "required": true,
+       "immutable": false
+     },
+     {
+       "name": "dns_suffixes",
+       "type": "list",
+       "description": "Name resolution suffixes for the virtual network adapter",
+       "hidden": false,
+       "label": "DNS Suffixes",
+       "secured": false,
+       "required": true,
+       "immutable": false
+     }
+    ]
+}

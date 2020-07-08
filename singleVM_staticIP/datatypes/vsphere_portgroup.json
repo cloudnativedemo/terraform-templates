@@ -1,0 +1,38 @@
+{
+   "name": "vsphere_portgroup",
+   "label": "vSphere port group",
+   "description": "IP/Hostname of DNS servers",
+   "attributes": [
+     {
+      "name": "network_interface_label",
+      "type": "string",
+      "description": "vSphere port group or network label for virtual machine's vNIC",
+      "hidden": false,
+      "label": "Virtual Machine vSphere Port Group",
+      "secured": false,
+      "required": true,
+      "immutable": false
+    },
+    {
+      "name": "adapter_type",
+      "type": "string",
+      "description": "Network adapter type for vNIC Configuration",
+      "hidden": false,
+      "label": "vSphere Network Adapter Type - vm_1",
+      "secured": false,
+      "options": [
+        {
+          "value": "vmxnet3",
+          "label": "vmxnet3",
+          "default": "true"
+        },
+        {
+          "value": "e1000",
+          "label": "e1000"
+        }
+      ],
+      "required": true,
+      "immutable": false
+    }
+    ]
+}

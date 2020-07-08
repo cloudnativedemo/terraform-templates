@@ -1,0 +1,112 @@
+{
+   "name": "virtualmachine_size",
+   "label": "Virtual machine size",
+   "description": "CPU, memory and storage sizing for virtual machines",
+   "attributes": [
+    {
+     "name": "vm_memory",
+     "type": "string",
+     "description": "Memory assigned to the virtual machine in megabytes. This value is required to be an increment of 1024",
+     "default": "1024",
+     "hidden": false,
+     "label": "Virtual Machine Memory",
+     "secured": false,
+     "required": true,
+     "immutable": false
+    },
+    {
+     "name": "vm_vcpu",
+     "type": "string",
+     "description": "Number of virtual CPU for the virtual machine, which is required to be a positive Integer",
+     "default": "1",
+     "hidden": false,
+     "label": "Virtual Machine vCPUs",
+     "secured": false,
+     "required": true,
+     "immutable": false
+    },
+    {
+     "name": "vm_root_disk_size",
+     "type": "string",
+     "description": "Size of template disk volume. Should be equal to template's disk size",
+     "default": "60",
+     "hidden": false,
+     "label": "Root Disk Size",
+     "secured": false,
+     "required": true,
+     "immutable": false
+    },
+    {
+     "name": "vm_root_disk_controller_type",
+     "type": "string",
+     "description": "Type of template disk controller",
+     "hidden": false,
+     "label": "Template Disk Controller",
+     "secured": false,
+     "options": [
+       {
+         "value": "scsi",
+         "label": "scsi",
+         "default": "true"
+       },
+       {
+         "value": "scsi-lsi-parallel",
+         "label": "scsi-lsi-parallel"
+       },
+       {
+         "value": "scsi-buslogic",
+         "label": "scsi-buslogic"
+       },
+       {
+         "value": "scsi-paravirtual",
+         "label": "scsi-paravirtual"
+       },
+       {
+         "value": "scsi-isi-sas",
+         "label": "scsi-isi-sas"
+       },
+       {
+         "value": "ide",
+         "label": "ide"
+       }
+     ],
+     "required": true,
+     "immutable": false
+    },
+    {
+     "name": "vm_root_disk_datastore",
+     "type": "string",
+     "description": "Data store or storage cluster name for target virtual machine's disks",
+     "hidden": false,
+     "label": "Template Disk Datastore",
+     "secured": false,
+     "required": true,
+     "immutable": false
+    },
+    {
+     "name": "vm_root_disk_type",
+     "type": "string",
+     "description": "Type of template disk volume",
+     "hidden": false,
+     "label": "Template Disk Type",
+     "secured": false,
+     "options": [
+       {
+         "value": "eager_zeroed",
+         "label": "Thick Provision Eager Zeroed",
+         "default": "true"
+       },
+       {
+         "value": "lazy",
+         "label": "Thick Provision Lazy Zeroed"
+       },
+       {
+         "value": "thin",
+         "label": "Thin Provision"
+       }
+     ],
+     "required": true,
+     "immutable": false
+    }
+    ]
+}
