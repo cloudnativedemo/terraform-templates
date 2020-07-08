@@ -151,7 +151,7 @@
       "name": "vm_1_poc_dns_servers",
       "type": "list",
       "description": "DNS servers for the virtual network adapter",
-      "default": "${poc_dns_server.poc_dns_servers}",
+      "default": "${poc_dns_server.dns_servers}",
       "hidden": true,
       "label": "DNS Servers",
       "secured": false,
