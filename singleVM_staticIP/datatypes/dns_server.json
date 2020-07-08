@@ -1,6 +1,6 @@
 {
    "name": "dns_server",
-   "label": "DNS Servers",
+   "label": "POC - DNS Servers",
    "description": "IP/Hostname of DNS servers",
    "attributes": [
      {

@@ -1,7 +1,7 @@
 # This is a terraform generated template generated from blueprint89
 
 ##############################################################
-# Keys - CAMC (public/private) & optional User Key (public) 
+# Keys - CAMC (public/private) & optional User Key (public)
 ##############################################################
 variable "allow_unverified_ssl" {
   description = "Communication with vsphere server with self signed certificate"
@@ -9,7 +9,7 @@ variable "allow_unverified_ssl" {
 }
 
 ##############################################################
-# Define the vsphere provider 
+# Define the vsphere provider
 ##############################################################
 provider "vsphere" {
   allow_unverified_ssl = var.allow_unverified_ssl
@@ -21,7 +21,7 @@ provider "camc" {
 }
 
 ##############################################################
-# Define pattern variables 
+# Define pattern variables
 ##############################################################
 
 ##############################################################
@@ -129,18 +129,6 @@ variable "vm_1_root_disk_datastore" {
   description = "Data store or storage cluster name for target virtual machine's disks"
 }
 
-variable "vm_1_root_disk_type" {
-  type        = string
-  description = "Type of template disk volume"
-  default     = "eager_zeroed"
-}
-
-variable "vm_1_root_disk_controller_type" {
-  type        = string
-  description = "Type of template disk controller"
-  default     = "scsi"
-}
-
 variable "vm_1_root_disk_keep_on_remove" {
   type        = string
   description = "Delete template disk volume when the virtual machine is deleted"
@@ -199,4 +187,3 @@ resource "vsphere_virtual_machine" "vm_1" {
     datastore_id   = data.vsphere_datastore.vm_1_datastore.id
   }
 }
-

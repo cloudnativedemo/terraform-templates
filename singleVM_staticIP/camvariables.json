@@ -197,16 +197,6 @@
       "required": true
     },
     {
-      "name": "vm_1_root_disk_controller_type",
-      "type": "string",
-      "description": "Type of template disk controller",
-      "default": "${virtualmachine_size.vm_root_disk_controller_type}",
-      "hidden": true,
-      "label": "Template Disk Controller",
-      "secured": false,
-      "required": true
-    },
-    {
       "name": "vm_1_root_disk_datastore",
       "type": "string",
       "description": "Data store or storage cluster name for target virtual machine's disks",
@@ -216,17 +206,6 @@
       "secured": false,
       "required": true
     },
-    {
-      "name": "vm_1_root_disk_type",
-      "type": "string",
-      "description": "Type of template disk volume",
-      "default": "${virtualmachine_size.vm_root_disk_type}",
-      "hidden": true,
-      "label": "Template Disk Type",
-      "secured": false,
-      "required": true
-    },
-
     {
       "name": "vm_1_memory",
       "type": "string",
