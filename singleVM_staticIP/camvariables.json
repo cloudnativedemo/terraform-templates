@@ -148,7 +148,7 @@
 
 
     {
-      "name": "vm_1_poc_dns_servers",
+      "name": "vm_1_dns_servers",
       "type": "list",
       "description": "DNS servers for the virtual network adapter",
       "default": "${poc_dns_server.dns_servers}",
