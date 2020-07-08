@@ -43,19 +43,6 @@
       "required": true,
       "immutable": false,
       "group_name": "cloud"
-    },
-    {
-      "name": "vm_1_dns_servers",
-      "type": "sharedparameter",
-      "customtype": "string",
-      "datatype": "virtualmachine",
-      "description": "DNS servers for the virtual network adapter",
-      "hidden": false,
-      "label": "DNS Servers - vm_1",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "group_name": "virtualmachine"
     }
   ],
   "template_output_params": []
