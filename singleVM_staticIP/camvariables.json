@@ -142,7 +142,8 @@
        }
      ],
      "required": true,
-     "immutable": false
+     "immutable": false,
+     "group_name": "virtualmachine"
     },
 
 
