@@ -1,5 +1,5 @@
 {
-   "name": "vcenter_site",
+   "name": "poc_vcenter_site",
    "label": "POC - vSphere vCenter site",
    "description": "Details for vCenter location including vCenter name, cluster, resource pool and folder, and port group",
    "attributes": [

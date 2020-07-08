@@ -1,5 +1,5 @@
 {
-   "name": "vsphere_image",
+   "name": "poc_vsphere_image",
    "label": "POC - vSphere image template",
    "description": "IP/Hostname of DNS servers",
    "attributes": [

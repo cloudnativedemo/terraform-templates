@@ -1,5 +1,5 @@
 {
-   "name": "vsphere_portgroup",
+   "name": "poc_vsphere_portgroup",
    "label": "POC - vSphere port group",
    "description": "IP/Hostname of DNS servers",
    "attributes": [

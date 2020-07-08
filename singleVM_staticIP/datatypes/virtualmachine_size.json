@@ -1,5 +1,5 @@
 {
-   "name": "virtualmachine_size",
+   "name": "poc_virtualmachine_size",
    "label": "POC - Virtual machine size",
    "description": "CPU, memory and storage sizing for virtual machines",
    "attributes": [
