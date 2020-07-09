@@ -1,5 +1,5 @@
 {
-  "name": "vSphere virtual server with Infoblox (IPAM) integration",
+  "name": "vSphere virtual server with Infoblox IPAM integration",
   "description": "Deploy a virtual machine with Infoblox integration for IP generation",
   "type": "prebuilt",
   "version": "1.0",
