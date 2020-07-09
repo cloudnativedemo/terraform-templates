@@ -1,6 +1,6 @@
 {
-  "name": "vSphere virtual server with single static IP",
-  "description": "Deploy a virtual machine with single vnic on vSphere infrastructure",
+  "name": "vSphere virtual server with Infoblox (IPAM) integration",
+  "description": "Deploy a virtual machine with Infoblox integration for IP generation",
   "type": "prebuilt",
   "version": "1.0",
   "manifest": {
@@ -15,13 +15,13 @@
     "template_source": {
       "githubRepoUrl": "",
       "githubAccessToken": "",
-      "relativePathToTemplateFolder": "VMware/terraform/hcl/singleVM",
+      "relativePathToTemplateFolder": "",
       "templateFileName": "main.tf"
     }
   },
   "metadata": {
       "displayName": "vSphere virtual server",
-      "longDescription": "Create Virtual Machine with single vnic on a network label by cloning",
+      "longDescription": "Create Virtual Machine with Infoblox integration",
       "bullets": [
        {
          "title": "Clouds",
