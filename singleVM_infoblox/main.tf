@@ -222,3 +222,8 @@ resource "vsphere_virtual_machine" "vm_1" {
     datastore_id   = data.vsphere_datastore.vm_1_datastore.id
   }
 }
+
+### Outputs
+output "instance_ip_addr" {
+  value            = infoblox_ip_allocation.ip_allocation.ip_addr
+}
