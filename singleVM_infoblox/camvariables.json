@@ -331,5 +331,13 @@
       "required": true
     }
   ],
-  "template_output_params": []
+  "template_output_params": [
+    {
+      "name": "instance_ip_addr",
+      "label": "Instance IPv4 address",
+      "secured": false,
+      "type": "string",
+      "hidden": false
+    }
+  ]
 }
