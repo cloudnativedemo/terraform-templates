@@ -103,18 +103,6 @@ variable "vm_1_network_interface_label" {
   description = "vSphere port group or network label for virtual machine's vNIC"
 }
 
-variable "vm_1_ipv4_gateway" {
-  description = "IPv4 gateway for vNIC configuration"
-}
-
-variable "vm_1_ipv4_address" {
-  description = "IPv4 address for vNIC configuration"
-}
-
-variable "vm_1_ipv4_prefix_length" {
-  description = "IPv4 prefix length for vNIC configuration. The value must be a number between 8 and 32"
-}
-
 variable "vm_1_adapter_type" {
   description = "Network adapter type for vNIC Configuration"
   default     = "vmxnet3"

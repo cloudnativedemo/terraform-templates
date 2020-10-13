@@ -89,41 +89,6 @@
       "group_name": "virtualmachine"
     },
     {
-      "name": "vm_1_ipv4_address",
-      "type": "string",
-      "description": "IPv4 address for vNIC configuration",
-      "hidden": false,
-      "label": "Virtual Machine IP Address",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "group_name": "virtualmachine"
-    },
-    {
-      "name": "vm_1_ipv4_prefix_length",
-      "type": "string",
-      "description": "IPv4 prefix length for vNIC configuration. The value must be a number between 8 and 32",
-      "hidden": false,
-      "label": "Virtual Machine Netmask Prefix",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "group_name": "virtualmachine"
-    },
-    {
-      "name": "vm_1_ipv4_gateway",
-      "type": "string",
-      "description": "IPv4 gateway for vNIC configuration",
-      "hidden": false,
-      "label": "Virtual Machine Gateway Address",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "group_name": "virtualmachine"
-    },
-
-
-    {
      "name": "vm_1_root_disk_keep_on_remove",
      "type": "string",
      "description": "Delete template disk volume when the virtual machine is deleted",
