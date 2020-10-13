@@ -1,5 +1,5 @@
 {
-  "name": "vSphere virtual server with single static IP",
+  "name": "vSphere virtual server with DHCP",
   "description": "Deploy a virtual machine with single vnic on vSphere infrastructure",
   "type": "prebuilt",
   "version": "1.0",
