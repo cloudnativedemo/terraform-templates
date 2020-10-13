@@ -1,0 +1,47 @@
+{
+   "name": "poc_vcenter_site",
+   "label": "POC - vSphere vCenter site",
+   "description": "Details for vCenter location including vCenter name, cluster, resource pool and folder, and port group",
+   "attributes": [
+    {
+    "name": "vcenter_datacenter",
+    "type": "string",
+    "description": "Target vSphere datacenter for virtual machine creation",
+    "hidden": false,
+    "label": "vSphere vCenter name",
+    "secured": false,
+    "required": true,
+    "immutable": false
+    },
+    {
+     "name": "vcenter_cluster",
+     "type": "string",
+     "description": "Target vSphere cluster to host the virtual machine",
+     "hidden": false,
+     "label": "vSphere Cluster",
+     "secured": false,
+     "required": false,
+     "immutable": false
+    },
+    {
+     "name": "vcenter_folder",
+     "type": "string",
+     "description": "Target vSphere folder for virtual machine",
+     "hidden": false,
+     "label": "vSphere Folder name",
+     "secured": false,
+     "required": false,
+     "immutable": false
+    },
+    {
+     "name": "vcenter_resource_pool",
+     "type": "string",
+     "description": "Target vSphere Resource Pool to host the virtual machine",
+     "hidden": false,
+     "label": "vSphere Resource Pool",
+     "secured": false,
+     "required": false,
+     "immutable": false
+    }
+    ]
+}
