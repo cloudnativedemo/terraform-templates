@@ -134,6 +134,7 @@ resource "vsphere_virtual_machine" "vm_1" {
   guest_id         = data.vsphere_virtual_machine.vm_1_template.guest_id
   scsi_type        = data.vsphere_virtual_machine.vm_1_template.scsi_type
   firmware         = data.vsphere_virtual_machine.vm_1_template.firmware
+  resource_pool_id = data.vsphere_virtual_machine.vm_1_template.resource_pool_id
 
   clone {
     template_uuid = data.vsphere_virtual_machine.vm_1_template.id
