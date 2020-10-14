@@ -171,7 +171,12 @@ resource "vsphere_virtual_machine" "vm_1" {
   }
 
   network_interface {
-    network_id   = data.vsphere_network.vm_1_network.id
+    network_id   = data.vsphere_network.vm_1_network_1.id
+    adapter_type = var.vm_1_adapter_type
+  }
+  
+  network_interface {
+    network_id   = data.vsphere_network.vm_1_network_2.id
     adapter_type = var.vm_1_adapter_type
   }
 
