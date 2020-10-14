@@ -16,12 +16,7 @@
     {
       "name": "poc_vsphere_image",
       "label": "vSphere image template"
-    },
-    {
-      "name": "poc_vsphere_portgroup",
-      "label": "vSphere port group (networking)"
     }
-
   ],
   "output_datatype": "content_template_output",
   "input_groups": [
@@ -135,7 +130,7 @@
       "name": "vm_1_adapter_type",
       "type": "string",
       "description": "Network adapter type for vNIC Configuration",
-      "default": "${poc_vsphere_portgroup.adapter_type}",
+      "default": "vmxnet3",
       "hidden": true,
       "label": "vSphere Network Adapter Type",
       "secured": false,
@@ -196,7 +191,17 @@
       "name": "vm_1_network_interface_label_1",
       "type": "string",
       "description": "vSphere port group or network label for virtual machine's vNIC",
-      "default": "${poc_vsphere_portgroup.network_interface_label}",
+      "options": [
+        {
+          "value": "private_network",
+          "label": "Private network",
+          "default": "true"
+        },
+        {
+          "value": "public_network",
+          "label": "Public network"
+        }
+      ],
       "hidden": false,
       "label": "Virtual Machine vSphere Port Group",
       "secured": false,
