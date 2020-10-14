@@ -36,8 +36,13 @@ data "vsphere_datastore" "vm_1_datastore" {
   datacenter_id = data.vsphere_datacenter.vm_1_datacenter.id
 }
 
-data "vsphere_network" "vm_1_network" {
-  name          = var.vm_1_network_interface_label
+data "vsphere_network" "vm_1_network_1" {
+  name          = var.vm_1_network_interface_label_1
+  datacenter_id = data.vsphere_datacenter.vm_1_datacenter.id
+}
+
+data "vsphere_network" "vm_1_network_2" {
+  name          = var.vm_1_network_interface_label_2
   datacenter_id = data.vsphere_datacenter.vm_1_datacenter.id
 }
 
@@ -100,8 +105,12 @@ variable "vm_1_dns_servers" {
   description = "DNS servers for the virtual network adapter"
 }
 
-variable "vm_1_network_interface_label" {
-  description = "vSphere port group or network label for virtual machine's vNIC"
+variable "vm_1_network_interface_label_1" {
+  description = "Network interface 1"
+}
+
+variable "vm_1_network_interface_label_2" {
+  description = "Network interface 2"
 }
 
 variable "vm_1_adapter_type" {
@@ -150,6 +159,9 @@ resource "vsphere_virtual_machine" "vm_1" {
         host_name = var.vm_1_name
       }
 
+      network_interface {
+      }
+	  
       network_interface {
       }
 
