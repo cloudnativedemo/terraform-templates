@@ -211,7 +211,17 @@
       "name": "vm_1_network_interface_label_2",
       "type": "string",
       "description": "vSphere port group or network label for virtual machine's vNIC",
-      "default": "${poc_vsphere_portgroup.network_interface_label}",
+      "options": [
+        {
+          "value": "private_network",
+          "label": "Private network",
+          "default": "true"
+        },
+        {
+          "value": "public_network",
+          "label": "Public network"
+        }
+      ],
       "hidden": false,
       "label": "Virtual Machine vSphere Port Group",
       "secured": false,
