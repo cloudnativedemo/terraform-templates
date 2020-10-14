@@ -85,10 +85,6 @@ variable "vm_1_cluster" {
   description = "Target vSphere cluster to host the virtual machine"
 }
 
-variable "vm_1_resource_pool" {
-  description = "Target vSphere Resource Pool to host the virtual machine"
-}
-
 variable "vm_1_dns_suffixes" {
   type        = list(string)
   description = "Name resolution suffixes for the virtual network adapter"
