@@ -197,7 +197,7 @@
       "type": "string",
       "description": "vSphere port group or network label for virtual machine's vNIC",
       "default": "${poc_vsphere_portgroup.network_interface_label}",
-      "hidden": true,
+      "hidden": false,
       "label": "Virtual Machine vSphere Port Group",
       "secured": false,
       "required": true
@@ -207,7 +207,7 @@
       "type": "string",
       "description": "vSphere port group or network label for virtual machine's vNIC",
       "default": "${poc_vsphere_portgroup.network_interface_label}",
-      "hidden": true,
+      "hidden": false,
       "label": "Virtual Machine vSphere Port Group",
       "secured": false,
       "required": true
