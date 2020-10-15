@@ -170,13 +170,13 @@ resource "vsphere_virtual_machine" "vm_1" {
       }
 
       network_interface {
-      	ipv4_address = "10.0.0.1"
-        ipv4_netmask = "27"
+      	ipv4_address = ""
+        ipv4_netmask = ""
       }
 	  
       network_interface {
-      	ipv4_address = "135.90.0.0"
-        ipv4_netmask = "28"
+      	ipv4_address = ""
+        ipv4_netmask = ""
       }
 
       dns_suffix_list = var.vm_1_dns_suffixes
