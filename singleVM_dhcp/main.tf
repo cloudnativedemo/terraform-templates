@@ -171,12 +171,12 @@ resource "vsphere_virtual_machine" "vm_1" {
 
       network_interface {
       	ipv4_address = ""
-        ipv4_netmask = ""
+        wait_for_guest_ip_timeout = 30
       }
 	  
       network_interface {
       	ipv4_address = ""
-        ipv4_netmask = ""
+        wait_for_guest_ip_timeout = 30
       }
 
       dns_suffix_list = var.vm_1_dns_suffixes
