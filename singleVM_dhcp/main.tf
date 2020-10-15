@@ -149,7 +149,8 @@ resource "vsphere_virtual_machine" "vm_1" {
   scsi_type        = data.vsphere_virtual_machine.vm_1_template.scsi_type
   firmware         = data.vsphere_virtual_machine.vm_1_template.firmware
   resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
-  wait_for_guest_ip_timeout = 30
+  wait_for_guest_ip_timeout = 0
+  wait_for_guest_net_timeout = 0
 
   network_interface {
     network_id   = data.vsphere_network.vm_1_network_1.id
@@ -163,24 +164,6 @@ resource "vsphere_virtual_machine" "vm_1" {
 
   clone {
     template_uuid = data.vsphere_virtual_machine.vm_1_template.id
-
-    customize {
-      linux_options {
-        domain    = var.vm_1_domain
-        host_name = var.vm_1_name
-      }
-
-      network_interface {
-      	ipv4_address = ""
-      }
-	  
-      network_interface {
-      	ipv4_address = ""
-      }
-
-      dns_suffix_list = var.vm_1_dns_suffixes
-      dns_server_list = var.vm_1_dns_servers
-    }
   }
 
   disk {
