@@ -214,12 +214,12 @@
       "options": [
         {
           "value": "private_network",
-          "label": "Private network",
-          "default": "true"
+          "label": "Private network"
         },
         {
           "value": "public_network",
-          "label": "Public network"
+          "label": "Public network",
+          "default": "true"
         }
       ],
       "hidden": false,
