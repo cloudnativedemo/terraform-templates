@@ -150,6 +150,16 @@ resource "vsphere_virtual_machine" "vm_1" {
   firmware         = data.vsphere_virtual_machine.vm_1_template.firmware
   resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
 
+  network_interface {
+    network_id   = data.vsphere_network.vm_1_network_1.id
+    adapter_type = var.vm_1_adapter_type
+  }
+  
+  network_interface {
+    network_id   = data.vsphere_network.vm_1_network_2.id
+    adapter_type = var.vm_1_adapter_type
+  }
+
   clone {
     template_uuid = data.vsphere_virtual_machine.vm_1_template.id
 
@@ -160,24 +170,16 @@ resource "vsphere_virtual_machine" "vm_1" {
       }
 
       network_interface {
+      	ipv4_address = ""
       }
 	  
       network_interface {
+      	ipv4_address = ""
       }
 
       dns_suffix_list = var.vm_1_dns_suffixes
       dns_server_list = var.vm_1_dns_servers
     }
-  }
-
-  network_interface {
-    network_id   = data.vsphere_network.vm_1_network_1.id
-    adapter_type = var.vm_1_adapter_type
-  }
-  
-  network_interface {
-    network_id   = data.vsphere_network.vm_1_network_2.id
-    adapter_type = var.vm_1_adapter_type
   }
 
   disk {
