@@ -149,6 +149,7 @@ resource "vsphere_virtual_machine" "vm_1" {
   scsi_type        = data.vsphere_virtual_machine.vm_1_template.scsi_type
   firmware         = data.vsphere_virtual_machine.vm_1_template.firmware
   resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
+  wait_for_guest_ip_timeout = 30
 
   network_interface {
     network_id   = data.vsphere_network.vm_1_network_1.id
@@ -171,12 +172,10 @@ resource "vsphere_virtual_machine" "vm_1" {
 
       network_interface {
       	ipv4_address = ""
-        wait_for_guest_ip_timeout = 30
       }
 	  
       network_interface {
       	ipv4_address = ""
-        wait_for_guest_ip_timeout = 30
       }
 
       dns_suffix_list = var.vm_1_dns_suffixes
